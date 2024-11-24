@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #a9d6a9; /* Light Green Background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header Section */
+        .header {
+            width: 70%; /* Matches form width */
+            max-width: 800px;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-radius: 8px 8px 0 0; /* Rounded top corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header img {
+            height: 100px; /* Logo size */
+            width: auto;
+        }
+
+        .header-content {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 35px;
+            text-transform: uppercase;
+        }
+
+        .header-content h3 {
+            margin: 5px 0 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        /* Form Body Section */
+        .form-body {
+            width: 70%; /* 70% of the container width */
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.6); /* 60% transparent white */
+            padding: 20px;
+            border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-body h3 {
+            text-align: center;
+            margin-top: 0;
+            color: #000000;
+        }
+
+        /* Input fields styled to stay within 70% of form width */
+        .form-body label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .form-body input, 
+        .form-body select, 
+        .form-body textarea {
+            width: 70%; /* 70% of the form body width */
+            margin: 5px auto; /* Center-align the inputs */
+            display: block; /* Ensure block layout for centered alignment */
+            padding: 12px;
+            border: none; /* Remove borders */
+            border-radius: 8px; /* Rounded corners */
+            background-color: white; /* White background */
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for clean look */
+            font-size: 14px;
+        }
+
+        .form-body input:focus, 
+        .form-body select:focus, 
+        .form-body textarea:focus {
+            outline: none; /* Remove default outline */
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.6); /* Highlight border on focus */
+        }
+
+        .form-body textarea {
+            height: 150px; /* Increase height for bigger space */
+            resize: none; /* Prevent resizing */
+        }
+
+        .form-body button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 70%; /* Button matches input field width */
+            margin: 10px auto; /* Center the button */
+            font-size: 16px;
+            display: block;
+        }
+
+        .form-body button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <img src="logo.jpg" alt="Logo"> <!--  logo -->
+        <div class="header-content">
+            <h1>NATIONAL LIBRARY OF NIGERIA</h1>
+            <h3>November 2024 PMS Form</h3>
+        </div>
+    </div>
+
+    <!-- Form Body Section -->
+    <div class="form-body">
+        <h3>Performance Management System</h3>
+        <form action="https://script.google.com/macros/s/AKfycbx3AR7DA4iKeGA8EgcLui0luue_WAKsIG6VneqBzNgC14BYfbCmG1CBxUEjTrYnxbGtFg/exec" method="POST">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="staff_name">Staff Name:</label>
+            <input type="text" id="staff_name" name="staff_name" required>
+
+            <label for="file_no">File Number:</label>
+            <input type="text" id="file_no" name="file_no" required>
+
+            <label for="ippis_no">IPPIS Number:</label>
+            <input type="text" id="ippis_no" name="ippis_no" required>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="">Select Branch</option>
+                <option value="branch1">Branch 1</option>
+                <option value="branch2">Branch 2</option>
+                <option value="branch3">Branch 3</option>
+            </select>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="hr">Human Resources</option>
+                <option value="it">IT</option>
+                <option value="finance">Finance</option>
+            </select>
+
+            <label for="division">Division:</label>
+            <select id="division" name="division" required>
+                <option value="">Select Division</option>
+                <option value="admin">Administration</option>
+                <option value="sales">Sales</option>
+                <option value="operations">Operations</option>
+            </select>
+
+            <label for="job_schedule">Job Schedule:</label>
+            <textarea id="job_schedule" name="job_schedule" required></textarea>
+
+            <label for="tasks">Daily Completed Task for the Day:</label>
+            <textarea id="tasks" name="tasks" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
